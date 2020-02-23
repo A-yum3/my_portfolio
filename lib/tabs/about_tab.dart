@@ -1,103 +1,11 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:my_portfolio/config/assets.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:my_portfolio/config/constants.dart';
+import 'package:my_portfolio/widgets/wrap_chip_list.dart';
 
 class AboutTab extends StatelessWidget {
-  List<SkillChip> _skillLanguageChipList = [
-    SkillChip(
-      title: 'HTML',
-      icon: Image.asset(Assets.html),
-    ),
-    SkillChip(
-      title: 'CSS',
-      icon: Image.asset(Assets.css),
-    ),
-    SkillChip(
-      title: 'Dart',
-      icon: Image.asset(Assets.dart),
-    ),
-    SkillChip(
-      title: 'Python',
-      icon: Image.asset(Assets.python),
-    ),
-    SkillChip(
-      title: 'C++',
-      icon: Image.asset(Assets.cpp),
-    ),
-    SkillChip(
-      title: 'Ruby',
-      icon: Image.asset(Assets.ruby),
-    )
-  ];
-
-  List<SkillChip> _skillFWChipList = [
-    SkillChip(
-      title: 'Flutter',
-      icon: FlutterLogo(),
-    ),
-    SkillChip(
-      title: 'Django',
-      icon: Image.asset(Assets.django),
-    ),
-    SkillChip(
-      title: 'Flask',
-      icon: Image.asset(Assets.flask),
-    ),
-    SkillChip(
-      title: 'Ruby on Rails',
-      icon: Image.asset(Assets.ror),
-    ),
-    SkillChip(
-      title: 'Bootstrap',
-      icon: Image.asset(Assets.bootstrap),
-    )
-  ];
-
-  List<SkillChip> _skillToolsChipList = [
-    SkillChip(
-      title: 'git',
-      icon: Image.asset(Assets.git),
-    ),
-    SkillChip(
-      title: 'Sketch',
-      icon: Image.asset(Assets.sketch),
-    ),
-    SkillChip(
-      title: 'SourceTree',
-      icon: Image.asset(Assets.sourceTree),
-    ),
-    SkillChip(
-      title: 'VSCode',
-      icon: Image.asset(Assets.vsCode),
-    ),
-    SkillChip(
-      title: 'AndroidStudio',
-      icon: Image.asset(Assets.androidStudio),
-    ),
-    SkillChip(
-      title: 'Firebase',
-      icon: Image.asset(Assets.fireBase),
-    ),
-  ];
-
-  List<SkillChip> _skillOsChipList = [
-    SkillChip(
-      title: 'Mac',
-      icon: Image.asset(Assets.mac),
-    ),
-    SkillChip(
-      title: 'Windows',
-      icon: Image.asset(Assets.win10),
-    ),
-    SkillChip(
-      title: 'CentOS',
-      icon: Image.asset(Assets.centOs),
-    )
-  ];
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -133,6 +41,7 @@ class AboutTab extends StatelessWidget {
               SizedBox(height: 20),
               Opacity(
                 opacity: 0.5,
+                // TODO: 自分についてもっと詳しく
                 child: Text(
                   'Flutterと競プロすき\n'
                       'コード書くのすき',
@@ -150,10 +59,12 @@ class AboutTab extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              WrapChipList(children: _skillLanguageChipList),
-              WrapChipList(children: _skillFWChipList),
-              WrapChipList(children: _skillToolsChipList),
-              WrapChipList(children: _skillOsChipList),
+              WrapChipList(children: kSkillLanguageChipList),
+              WrapChipList(children: kSkillFWChipList),
+              WrapChipList(children: kSkillToolsChipList),
+              WrapChipList(children: kSkillOsChipList),
+              // TODO: SNSへのリンクを追加する
+              // TODO: 資格セットを書く
             ],
           ),
         ),
@@ -162,37 +73,3 @@ class AboutTab extends StatelessWidget {
   }
 }
 
-class WrapChipList extends StatelessWidget {
-  final List<SkillChip> children;
-
-  WrapChipList({this.children});
-
-  @override
-  Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: 8.0,
-      runSpacing: 4.0,
-      direction: Axis.horizontal,
-      children: children,
-    );
-  }
-}
-
-class SkillChip extends StatelessWidget {
-  final String title;
-  final Widget icon;
-
-  SkillChip({this.title, this.icon});
-
-  @override
-  Widget build(BuildContext context) {
-    return ActionChip(
-      avatar: icon,
-      label: Text(title),
-      onPressed: () {
-        // TODO: タップ時に開いて経験を表示するようにする。
-      },
-    );
-  }
-}
