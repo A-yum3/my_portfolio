@@ -17,9 +17,11 @@ const String myAtCoder = 'https://atcoder.jp/users/cowgirl';
 const String aboutMeDescription = '高校卒業後１年間プロゲーマーを目指してフリーター。\n'
     '限界を感じ、昔からパソコンが好きだったのでプログラミングを学ぶ為に情報専門に入学。\n'
     '実情は、資格対策学校だったが為にプログラミングは独学で紆余曲折を経て習得。\n'
-    '現在はFlutterでモバイル開発を趣味に就活中。コロナがコワイ\u{1F637}';
+    '現在はFlutterでモバイル開発を趣味にしてます。Web系/モバイルアプリ系で就活中。コロナがコワイ\u{1F637}';
 
 const String qualifications =
+    '・Flutter\n'
+    '・WebDev\n'
     '・ダーツ\n'
     '・ビリヤード\n'
     '・インディーズゲーム\n'
