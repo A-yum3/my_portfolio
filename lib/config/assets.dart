@@ -2,7 +2,6 @@ class Assets{
   static const avatar = 'assets/images/myimage.jpg';
 
 
-  // TODO: faviconを使うまたは16x16
   // Languages
   static const html = 'assets/images/html.png';
   static const cpp = 'assets/images/cpp.png';
@@ -36,4 +35,5 @@ class Assets{
   static const note = 'assets/images/note.png';
   static const facebook = 'assets/images/facebook.png';
   static const github = 'assets/images/github.png';
+  static const atCoder = 'assets/images/Atcoder.png';
 }

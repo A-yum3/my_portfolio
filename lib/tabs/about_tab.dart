@@ -41,34 +41,92 @@ class AboutTab extends StatelessWidget {
               SizedBox(height: 20),
               Opacity(
                 opacity: 0.5,
-                // TODO: 自分についてもっと詳しく
                 child: Text(
-                  'Flutterと競プロすき\n'
-                  'コード書くのすき',
+                  'Flutterと競プロすき\u{1F60A}\n'
+                  'コード書くのすき\u{1F60F}',
                   textScaleFactor: 1.5,
-                  style: TextStyle(),
                 ),
               ),
               SizedBox(height: 20),
-              Text(
-                'Skill Set',
-                textScaleFactor: 2,
-                style: TextStyle(
-                  fontFamily: 'FZ',
+              WrapChipList(children: kSnsChipList),
+              SizedBox(height: 100),
+
+              // ---------------------------------------------------------
+              // About Me
+              Text('About Me', textScaleFactor: 2, style: kSubTitleTextStyle),
+              SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+                child: Text(
+                  aboutMeDescription,
+                  textScaleFactor: 1.5,
                 ),
               ),
+              SizedBox(height: 100),
+
+              // --------------------------------------------------------
+              // Interests/Hobbies
+              Text('Interests/Hobbies',
+                  textScaleFactor: 2, style: kSubTitleTextStyle),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                child: Text(
+                  qualifications,
+                  textScaleFactor: 1.5,
+                  style: kSubTitleTextStyle.copyWith(height: 2.0),
+                ),
+              ),
+
+              SizedBox(height: 100),
+              // ---------------------------------------------------------
+              // Qualifications
+              Text(
+                'Qualifications',
+                textScaleFactor: 2,
+                style: kSubTitleTextStyle,
+              ),
+              SizedBox(height: 20),
+              QualificationItem(title: 'データベーススペシャリスト, April 2019'),
+              QualificationItem(title: '情報安全確保支援士, Oct 2018'),
+              QualificationItem(title: '応用情報技術者試験, April 2018'),
+              QualificationItem(title: '基本情報技術者意見, Oct 2017'),
+              QualificationItem(title: 'G検定, Aug 2019'),
+              QualificationItem(title: 'LinuC lv1, July 2018'),
+              SizedBox(height: 100),
+
+              // ---------------------------------------------------------
+              // Skill Set
+              Text('Skill Set', textScaleFactor: 2, style: kSubTitleTextStyle),
               SizedBox(height: 20),
               WrapChipList(children: kSkillLanguageChipList),
               WrapChipList(children: kSkillFWChipList),
               WrapChipList(children: kSkillToolsChipList),
               WrapChipList(children: kSkillOsChipList),
-              WrapChipList(children: kSnsChipList),
-              // TODO: SNSへのリンクを追加する
-              // TODO: 資格セットを書く
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class QualificationItem extends StatelessWidget {
+  final String title;
+
+  QualificationItem({this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Icon(Icons.school),
+        SizedBox(width: 10),
+        Text(
+          title,
+          textScaleFactor: 1.5,
+        ),
+      ],
     );
   }
 }
