@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             title: Text('Blog'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mobile_screen_share),
+            icon: Icon(Icons.web),
             title: Text('Projects'),
           )
         ],
