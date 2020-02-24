@@ -1,6 +1,8 @@
 class Assets{
   static const avatar = 'assets/images/myimage.jpg';
 
+
+  // TODO: faviconを使うまたは16x16
   // Languages
   static const html = 'assets/images/html.png';
   static const cpp = 'assets/images/cpp.png';
@@ -27,4 +29,11 @@ class Assets{
   static const mac = 'assets/images/apple.png';
   static const win10 = 'assets/images/win10.png';
   static const centOs = 'assets/images/centos.png';
+
+  // SNS
+  static const qiita = 'assets/images/qiita.png';
+  static const twitter = 'assets/images/twitter.png';
+  static const note = 'assets/images/note.png';
+  static const facebook = 'assets/images/facebook.png';
+  static const github = 'assets/images/github.png';
 }

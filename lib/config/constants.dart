@@ -1,81 +1,81 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/widgets/skill_chip.dart';
+import 'package:my_portfolio/widgets/my_chip.dart';
 import 'assets.dart';
 
-List<SkillChip> kSkillLanguageChipList = [
-  SkillChip(
+List<MyChip> kSkillLanguageChipList = [
+  MyChip(
     title: 'HTML',
     icon: Image.asset(Assets.html),
   ),
-  SkillChip(
+  MyChip(
     title: 'CSS',
     icon: Image.asset(Assets.css),
   ),
-  SkillChip(
+  MyChip(
     title: 'Dart',
     icon: Image.asset(Assets.dart),
   ),
-  SkillChip(
+  MyChip(
     title: 'Python',
     icon: Image.asset(Assets.python),
   ),
-  SkillChip(
+  MyChip(
     title: 'C++',
     icon: Image.asset(Assets.cpp),
   ),
-  SkillChip(
+  MyChip(
     title: 'Ruby',
     icon: Image.asset(Assets.ruby),
   )
 ];
 
 
-List<SkillChip> kSkillFWChipList = [
-  SkillChip(
+List<MyChip> kSkillFWChipList = [
+  MyChip(
     title: 'Flutter',
     icon: FlutterLogo(),
   ),
-  SkillChip(
+  MyChip(
     title: 'Django',
     icon: Image.asset(Assets.django),
   ),
-  SkillChip(
+  MyChip(
     title: 'Flask',
     icon: Image.asset(Assets.flask),
   ),
-  SkillChip(
+  MyChip(
     title: 'Ruby on Rails',
     icon: Image.asset(Assets.ror),
   ),
-  SkillChip(
+  MyChip(
     title: 'Bootstrap',
     icon: Image.asset(Assets.bootstrap),
   )
 ];
 
 
-List<SkillChip> kSkillToolsChipList = [
-  SkillChip(
+List<MyChip> kSkillToolsChipList = [
+  MyChip(
     title: 'git',
     icon: Image.asset(Assets.git),
   ),
-  SkillChip(
+  MyChip(
     title: 'Sketch',
     icon: Image.asset(Assets.sketch),
   ),
-  SkillChip(
+  MyChip(
     title: 'SourceTree',
     icon: Image.asset(Assets.sourceTree),
   ),
-  SkillChip(
+  MyChip(
     title: 'VSCode',
     icon: Image.asset(Assets.vsCode),
   ),
-  SkillChip(
+  MyChip(
     title: 'AndroidStudio',
     icon: Image.asset(Assets.androidStudio),
   ),
-  SkillChip(
+  MyChip(
     title: 'Firebase',
     icon: Image.asset(Assets.fireBase),
   ),
@@ -83,17 +83,40 @@ List<SkillChip> kSkillToolsChipList = [
 ];
 
 
-List<SkillChip> kSkillOsChipList = [
-  SkillChip(
+List<MyChip> kSkillOsChipList = [
+  MyChip(
     title: 'Mac',
     icon: Image.asset(Assets.mac),
   ),
-  SkillChip(
+  MyChip(
     title: 'Windows',
     icon: Image.asset(Assets.win10),
   ),
-  SkillChip(
+  MyChip(
     title: 'CentOS',
     icon: Image.asset(Assets.centOs),
+  )
+];
+
+List<MyChip> kSnsChipList = [
+  MyChip(
+    title: 'GitHub',
+    icon: Image.asset(Assets.github),
+  ),
+  MyChip(
+    title: 'Twitter',
+    icon: Image.asset(Assets.twitter),
+  ),
+  MyChip(
+    title: 'FaceBook,',
+    icon: Image.asset(Assets.facebook),
+  ),
+  MyChip(
+    title: 'Note',
+    icon: Image.asset(Assets.note),
+  ),
+  MyChip(
+    title: 'Qiita',
+    icon: Image.asset(Assets.qiita),
   )
 ];

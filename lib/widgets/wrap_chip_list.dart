@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'skill_chip.dart';
+import 'my_chip.dart';
 
 class WrapChipList extends StatelessWidget {
-  final List<SkillChip> children;
+  final List<MyChip> children;
 
   WrapChipList({this.children});
 

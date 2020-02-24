@@ -44,10 +44,9 @@ class AboutTab extends StatelessWidget {
                 // TODO: 自分についてもっと詳しく
                 child: Text(
                   'Flutterと競プロすき\n'
-                      'コード書くのすき',
+                  'コード書くのすき',
                   textScaleFactor: 1.5,
-                  style: TextStyle(
-                  ),
+                  style: TextStyle(),
                 ),
               ),
               SizedBox(height: 20),
@@ -63,6 +62,7 @@ class AboutTab extends StatelessWidget {
               WrapChipList(children: kSkillFWChipList),
               WrapChipList(children: kSkillToolsChipList),
               WrapChipList(children: kSkillOsChipList),
+              WrapChipList(children: kSnsChipList),
               // TODO: SNSへのリンクを追加する
               // TODO: 資格セットを書く
             ],
@@ -72,4 +72,3 @@ class AboutTab extends StatelessWidget {
     );
   }
 }
-

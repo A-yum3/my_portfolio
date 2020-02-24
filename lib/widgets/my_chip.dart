@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SkillChip extends StatelessWidget {
+class MyChip extends StatelessWidget {
   final String title;
   final Widget icon;
 
-  SkillChip({this.title, this.icon});
+  MyChip({this.title, this.icon});
 
   @override
   Widget build(BuildContext context) {
