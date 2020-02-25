@@ -9,7 +9,7 @@ class BlogTab extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Text('\u{26D4}工事中！\u{26D4}')
+        const Text('\u{26D4}工事中！\u{26D4}'),
       ],
     );
   }

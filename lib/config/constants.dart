@@ -29,6 +29,8 @@ const String qualifications =
     '・RocketLeague\n'
     '・Listen to Music(EDM)';
 
+const List<String> myName = ['Up Mountains'];
+
     List<MyChip> kSkillLanguageChipList = [
   MyChip(
     title: 'HTML',
@@ -65,7 +67,7 @@ const String qualifications =
 List<MyChip> kSkillFWChipList = [
   MyChip(
     title: 'Flutter',
-    icon: FlutterLogo(),
+    icon: const FlutterLogo(),
     onPressed: (){},
   ),
   MyChip(

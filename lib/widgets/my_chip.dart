@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class MyChip extends StatelessWidget {
+  const MyChip({this.title, this.icon, this.onPressed});
+
   final String title;
   final Widget icon;
-  final Function onPressed;
+  final VoidCallback onPressed;
 
-  MyChip({this.title, this.icon, this.onPressed});
 
   @override
   Widget build(BuildContext context) {

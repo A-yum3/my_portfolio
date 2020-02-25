@@ -15,7 +15,7 @@ final List<Project> projects = [
     name: 'AtCoder Tracker',
     description: 'AtCoder Problems上に登録されているユーザーの情報と'
         'AtCoder上のユーザー情報を取得し管理します。',
-    image: Assets.ACT,
+    image: Assets.atCoderTracker,
     link: 'https://github.com/Javateaboy/tracker_status_atcoder',
   ),
   Project(

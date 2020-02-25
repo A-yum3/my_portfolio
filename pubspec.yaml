@@ -15,6 +15,7 @@ dependencies:
   animated_text_kit: ^2.0.0
   url_launcher_web: ^0.1.1+1
   url_launcher: ^5.1.4
+  pedantic_mono: ^1.8.0
 
 dev_dependencies:
   flutter_test:

@@ -3,12 +3,10 @@ class Assets{
 
   // work
   static const messaging = 'assets/works/messaging.png';
-  static const ACT = 'assets/works/a.gif';
+  static const atCoderTracker = 'assets/works/a.gif';
   static const myPortfolio = 'assets/works/myportfolio.png';
   static const tbccpc = 'assets/works/tbccpc.jpeg';
   static const noImage = 'assets/works/no_image.png';
-
-
 
   // Languages
   static const html = 'assets/images/html.png';

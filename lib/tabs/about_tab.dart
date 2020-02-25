@@ -11,7 +11,7 @@ class AboutTab extends StatelessWidget {
     return SingleChildScrollView(
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 16.0),
+          padding: const EdgeInsets.only(bottom: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -19,17 +19,15 @@ class AboutTab extends StatelessWidget {
                 radius: 100,
                 backgroundImage: Image.asset(Assets.avatar).image,
               ),
-              SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   TypewriterAnimatedTextKit(
-                    text: ['Up Mountains'],
+                    text: myName,
                     totalRepeatCount: 1,
-                    speed: Duration(milliseconds: 500),
-                    textStyle: TextStyle(
+                    speed: const Duration(milliseconds: 500),
+                    textStyle: const TextStyle(
                       fontSize: 60,
                       fontFamily: 'SourceSansPro',
                     ),
@@ -38,8 +36,8 @@ class AboutTab extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
-              Opacity(
+              const SizedBox(height: 20),
+              const Opacity(
                 opacity: 0.5,
                 child: Text(
                   'Flutterと競プロすき\u{1F60A}\n'
@@ -47,14 +45,14 @@ class AboutTab extends StatelessWidget {
                   textScaleFactor: 1.5,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               WrapChipList(children: kSnsChipList),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
 
               // ---------------------------------------------------------
               // About Me
               Text('About Me', textScaleFactor: 2, style: kSubTitleTextStyle),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                 child: Text(
@@ -62,22 +60,22 @@ class AboutTab extends StatelessWidget {
                   textScaleFactor: 1.5,
                 ),
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
 
               // --------------------------------------------------------
               // Interests/Hobbies
               Text('Interests/Hobbies',
                   textScaleFactor: 2, style: kSubTitleTextStyle),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Text(
                   qualifications,
                   textScaleFactor: 1.5,
-                  style: kSubTitleTextStyle.copyWith(height: 2.0),
+                  style: kSubTitleTextStyle.copyWith(height: 2),
                 ),
               ),
 
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               // ---------------------------------------------------------
               // Qualifications
               Text(
@@ -85,19 +83,19 @@ class AboutTab extends StatelessWidget {
                 textScaleFactor: 2,
                 style: kSubTitleTextStyle,
               ),
-              SizedBox(height: 20),
-              QualificationItem(title: 'データベーススペシャリスト, April 2019'),
-              QualificationItem(title: '情報安全確保支援士, Oct 2018'),
-              QualificationItem(title: '応用情報技術者試験, April 2018'),
-              QualificationItem(title: '基本情報技術者意見, Oct 2017'),
-              QualificationItem(title: 'G検定, Aug 2019'),
-              QualificationItem(title: 'LinuC lv1, July 2018'),
-              SizedBox(height: 100),
+              const SizedBox(height: 20),
+              const QualificationItem(title: 'データベーススペシャリスト, April 2019'),
+              const QualificationItem(title: '情報安全確保支援士, Oct 2018'),
+              const QualificationItem(title: '応用情報技術者試験, April 2018'),
+              const QualificationItem(title: '基本情報技術者意見, Oct 2017'),
+              const QualificationItem(title: 'G検定, Aug 2019'),
+              const QualificationItem(title: 'LinuC lv1, July 2018'),
+              const SizedBox(height: 100),
 
               // ---------------------------------------------------------
               // Skill Set
               Text('Skill Set', textScaleFactor: 2, style: kSubTitleTextStyle),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               WrapChipList(children: kSkillLanguageChipList),
               WrapChipList(children: kSkillFWChipList),
               WrapChipList(children: kSkillToolsChipList),
@@ -111,9 +109,10 @@ class AboutTab extends StatelessWidget {
 }
 
 class QualificationItem extends StatelessWidget {
-  final String title;
 
-  QualificationItem({this.title});
+  const QualificationItem({this.title});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +120,7 @@ class QualificationItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Icon(Icons.school),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Text(
           title,
           textScaleFactor: 1.5,

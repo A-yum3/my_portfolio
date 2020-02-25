@@ -3,10 +3,11 @@ import 'package:my_portfolio/models/project_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProjectWidget extends StatelessWidget {
+
+  const ProjectWidget(this._project, this._bottomPadding);
+
   final Project _project;
   final double _bottomPadding;
-
-  ProjectWidget(this._project, this._bottomPadding);
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +20,13 @@ class ProjectWidget extends StatelessWidget {
         .size
         .height;
     return Card(
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, _bottomPadding),
+      margin: EdgeInsets.fromLTRB(16, 16, 16, _bottomPadding),
       child: InkWell(
         onTap: () {
           launch(_project.link);
         },
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
@@ -44,7 +45,7 @@ class ProjectWidget extends StatelessWidget {
               Expanded(
                 flex: 60,
                 child: Container(
-                  padding: EdgeInsets.only(top: 8.0),
+                  padding: const EdgeInsets.only(top: 8),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,

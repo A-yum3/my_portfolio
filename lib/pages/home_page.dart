@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Up Mountains'),
+        title: const Text('Up Mountains'),
       ),
       body: Center(
         child: tabWidgets.elementAt(_selectedIndex),

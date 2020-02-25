@@ -8,7 +8,7 @@ class ProjectsTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveWidget(
       largeScreen: GridView.count(
-        padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 32.0),
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
         crossAxisCount: 3,
         childAspectRatio: MediaQuery.of(context).size.width /
             (MediaQuery.of(context).size.height / 1.1),
