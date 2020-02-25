@@ -7,7 +7,6 @@ class MyChip extends StatelessWidget {
   final Widget icon;
   final VoidCallback onPressed;
 
-
   @override
   Widget build(BuildContext context) {
     return ActionChip(

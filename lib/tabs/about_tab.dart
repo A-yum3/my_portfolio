@@ -51,7 +51,8 @@ class AboutTab extends StatelessWidget {
 
               // ---------------------------------------------------------
               // About Me
-              Text('About Me', textScaleFactor: 2, style: kSubTitleTextStyle),
+              const Text('About Me',
+                  textScaleFactor: 2, style: kSubTitleTextStyle),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -64,7 +65,7 @@ class AboutTab extends StatelessWidget {
 
               // --------------------------------------------------------
               // Interests/Hobbies
-              Text('Interests/Hobbies',
+              const Text('Interests/Hobbies',
                   textScaleFactor: 2, style: kSubTitleTextStyle),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
@@ -78,7 +79,7 @@ class AboutTab extends StatelessWidget {
               const SizedBox(height: 100),
               // ---------------------------------------------------------
               // Qualifications
-              Text(
+              const Text(
                 'Qualifications',
                 textScaleFactor: 2,
                 style: kSubTitleTextStyle,
@@ -94,7 +95,8 @@ class AboutTab extends StatelessWidget {
 
               // ---------------------------------------------------------
               // Skill Set
-              Text('Skill Set', textScaleFactor: 2, style: kSubTitleTextStyle),
+              const Text('Skill Set',
+                  textScaleFactor: 2, style: kSubTitleTextStyle),
               const SizedBox(height: 20),
               WrapChipList(children: kSkillLanguageChipList),
               WrapChipList(children: kSkillFWChipList),
@@ -109,7 +111,6 @@ class AboutTab extends StatelessWidget {
 }
 
 class QualificationItem extends StatelessWidget {
-
   const QualificationItem({this.title});
 
   final String title;
@@ -119,7 +120,7 @@ class QualificationItem extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Icon(Icons.school),
+        const Icon(Icons.school),
         const SizedBox(width: 10),
         Text(
           title,
